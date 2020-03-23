@@ -1,92 +1,157 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
+  <v-layout wrap justify-center align-center>
+    <v-flex xs12 md6 class="text-center">
+      <v-avatar size="250px" class="mb-4">
+        <img
+          src="photos/mikhail-levi-bkk-2020.jpg"
+          alt="Mikhail Levi Bangkok 2020"
+        >
+      </v-avatar>
+
+      <v-list>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="title">
+              Mikhail Levi
+            </v-list-item-title>
+            <v-list-item-subtitle>Full Stack Web Developer</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-flex>
+    <v-flex xs12 md6>
+      <div class="title mt-4 mb-4">
+        Contacts
       </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      <v-list flat dense>
+        <v-list-item href="https://t.me/mikhail_levi" target="_blank">
+          <v-list-item-icon>
+            <v-avatar size="30px">
+              <v-icon>fab fa-telegram-plane</v-icon>
+            </v-avatar>
+          </v-list-item-icon>
+          <v-list-item-content class="align-self-end">
+            <v-list-item-title class="subtitle-1">
+              @mikhail_levi
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item href="https://ru.linkedin.com/in/mikhail-levi-913b777a" target="_blank">
+          <v-list-item-icon>
+            <v-avatar size="30px">
+              <v-icon>fab fa-linkedin</v-icon>
+            </v-avatar>
+          </v-list-item-icon>
+          <v-list-item-content class="align-self-end">
+            <v-list-item-title class="subtitle-1">
+              Linkedin Profile
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item href="https://github.com/mindonline" target="_blank">
+          <v-list-item-icon>
+            <v-avatar size="30px">
+              <v-icon>fab fa-github</v-icon>
+            </v-avatar>
+          </v-list-item-icon>
+          <v-list-item-content class="align-self-end">
+            <v-list-item-title class="subtitle-1">
+              @mindonline
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-flex>
+    <v-flex xs12 md6>
+      <div class="title mt-4 mb-4">
+        Primary Skills
+      </div>
+      <div>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-laravel</v-icon>
+          </v-avatar>
+          Laravel
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-php</v-icon>
+          </v-avatar>
+          PHP
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-vuejs</v-icon>
+          </v-avatar>
+          VueJS
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-js-square</v-icon>
+          </v-avatar>
+          JavaScript
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-docker</v-icon>
+          </v-avatar>
+          Docker
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-git-alt</v-icon>
+          </v-avatar>
+          Git
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-html5</v-icon>
+          </v-avatar>
+          HTML5
+        </v-chip>
+        <v-chip
+          class="ma-2"
+          color="primary"
+          text-color="white"
+        >
+          <v-avatar left>
+            <v-icon small>fab fa-css3-alt</v-icon>
+          </v-avatar>
+          CSS3
+        </v-chip>
+      </div>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
-}
+  export default {}
 </script>

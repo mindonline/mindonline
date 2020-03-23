@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '//use.fontawesome.com/releases/v5.8.2/css/all.css' }
     ]
   },
   /*
@@ -60,6 +61,9 @@ export default {
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    icons: {
+      iconfont: 'fa'
+    },
     theme: {
       dark: true,
       themes: {

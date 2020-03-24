@@ -1,4 +1,10 @@
 version: 2.1
+general:
+  branches:
+    only:
+      - master
+      - develop
+      - circleci-project-setup
 orbs:
   node: circleci/node@1.1.6
 jobs:
@@ -12,7 +18,9 @@ jobs:
           steps:
             - run: yarn install
       - run: yarn test
+      - store_test_results:
+          path: test-results/jest
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  build-and-test:
+    jobs:
+      - build-and-test

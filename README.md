@@ -1,4 +1,4 @@
-# mindonline
+# mindonline [![<mindonline>](https://circleci.com/gh/mindonline/mindonline.svg?style=shield)](https://circleci.com/gh/mindonline/mindonline)
 
 > Mikhail Levi Contact Page
 

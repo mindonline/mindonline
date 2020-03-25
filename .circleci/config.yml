@@ -20,7 +20,20 @@ jobs:
       - run: yarn test
       - store_test_results:
           path: test-results/jest
+  deploy:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "b4:13:f8:86:b6:d3:3b:ab:bd:fd:51:f0:b4:3f:a7:b9"
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh $HOST_USER@$HOST_NAME:$HOST_PORT "$DEPLOY_CMD"
+
 workflows:
-  build-and-test:
+  build-and-test-deploy:
     jobs:
       - build-and-test
+      - deploy:
+          requires:
+            - build-and-test

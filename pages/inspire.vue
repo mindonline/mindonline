@@ -14,6 +14,14 @@
           </small>
         </footer>
       </blockquote>
+      <blockquote class="blockquote">
+        &#8220;It’s better to be safe than sorry.&#8221;
+        <footer>
+          <small>
+            <em>&mdash;Someone</em>
+          </small>
+        </footer>
+      </blockquote>
     </v-flex>
   </v-layout>
 </template>

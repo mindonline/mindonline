@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh $HOST_USER@$HOST_NAME:$HOST_PORT "$DEPLOY_CMD"
+            ssh $HOST_USER@$HOST_NAME -p $HOST_PORT "$DEPLOY_CMD"
 
 workflows:
   build-and-test-deploy:

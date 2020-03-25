@@ -22,6 +22,14 @@
           </small>
         </footer>
       </blockquote>
+      <blockquote class="blockquote">
+        &#8220;To be or not to be.&#8221;
+        <footer>
+          <small>
+            <em>&mdash;Circle CI Build Pipeline</em>
+          </small>
+        </footer>
+      </blockquote>
     </v-flex>
   </v-layout>
 </template>

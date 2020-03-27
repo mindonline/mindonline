@@ -1,7 +1,7 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-import SkillsBages from '@/components/SkillsBages.vue'
+import SkillsBadges from '~/components/SkillsBadges.vue'
 
 Vue.use(Vuetify)
 
@@ -9,12 +9,12 @@ const testSkills = {
   skillName: 'Skill Icon Name'
 }
 
-describe('SkillsBages', () => {
+describe('SkillsBadges', () => {
   let testInstance = null
 
   beforeAll(() => {
     const localVue = createLocalVue()
-    testInstance = mount(SkillsBages, {
+    testInstance = mount(SkillsBadges, {
       ...localVue,
       propsData: {
         input: testSkills
@@ -22,7 +22,7 @@ describe('SkillsBages', () => {
     })
   })
 
-  test('is a SkillsBages instance', () => {
+  test('is a SkillsBadges instance', () => {
     expect(testInstance.isVueInstance()).toBeTruthy()
   })
 

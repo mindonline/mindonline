@@ -8,16 +8,16 @@
       :text-color="textColor"
     >
       <v-avatar left>
-        <v-icon small v-text="skill.icon"></v-icon>
+        <v-icon small v-text="skill.icon" />
       </v-avatar>
-      {{skill.name}}
+      {{ skill.name }}
     </v-chip>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'SkillsBages',
+    name: 'SkillsBadges',
     props: {
       input: {
         type: Object,

@@ -1,6 +1,6 @@
 <template>
-  <v-layout wrap justify-center align-center>
-    <v-flex xs12 md6 class="text-center">
+  <v-layout wrap justify-center align-start>
+    <v-flex xs12 md5 class="text-center">
       <v-avatar size="250px" class="mb-4">
         <img
           src="photos/mikhail-levi-bkk-2020.jpg"
@@ -19,7 +19,7 @@
         </v-list-item>
       </v-list>
     </v-flex>
-    <v-flex xs12 md6>
+    <v-flex xs12 md5>
       <div class="title mt-4 mb-4">
         Contacts
       </div>
@@ -62,96 +62,20 @@
         </v-list-item>
       </v-list>
     </v-flex>
-    <v-flex xs12 md6>
+    <v-flex xs12 md5>
       <div class="title mt-4 mb-4">
         Primary Skills
       </div>
       <div>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-laravel</v-icon>
-          </v-avatar>
-          Laravel
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-php</v-icon>
-          </v-avatar>
-          PHP
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-vuejs</v-icon>
-          </v-avatar>
-          VueJS
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-js-square</v-icon>
-          </v-avatar>
-          JavaScript
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-docker</v-icon>
-          </v-avatar>
-          Docker
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-git-alt</v-icon>
-          </v-avatar>
-          Git
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-html5</v-icon>
-          </v-avatar>
-          HTML5
-        </v-chip>
-        <v-chip
-          class="ma-2"
-          color="primary"
-          text-color="white"
-        >
-          <v-avatar left>
-            <v-icon small>fab fa-css3-alt</v-icon>
-          </v-avatar>
-          CSS3
-        </v-chip>
+        <skills-badges :input="$store.state.primarySkills" />
       </div>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-  export default {}
+  import SkillsBadges from '../components/SkillsBadges'
+  export default {
+    components: { SkillsBadges }
+  }
 </script>

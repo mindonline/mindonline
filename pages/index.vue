@@ -19,7 +19,7 @@
         Primary Skills
       </div>
       <div>
-        <skills-badges :input="$store.state.primarySkills" />
+        <skills-badges :value="$store.state.primarySkills" />
       </div>
     </v-flex>
   </v-layout>

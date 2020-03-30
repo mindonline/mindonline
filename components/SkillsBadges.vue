@@ -19,7 +19,7 @@
   export default {
     name: 'SkillsBadges',
     props: {
-      input: {
+      value: {
         type: Object,
         required: true
       },
@@ -34,10 +34,10 @@
     },
     computed: {
       skills () {
-        return Object.keys(this.input)
+        return Object.keys(this.value)
           .map(name => ({
             name,
-            icon: this.input[name]
+            icon: this.value[name]
           }))
       }
     }

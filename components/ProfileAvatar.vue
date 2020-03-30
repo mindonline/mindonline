@@ -11,7 +11,7 @@
     <v-list v-if="title || subTitle">
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title v-if="title" class="title" >
+          <v-list-item-title v-if="title" class="title">
             {{ title }}
           </v-list-item-title>
           <v-list-item-subtitle v-if="subTitle">

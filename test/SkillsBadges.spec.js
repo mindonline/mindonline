@@ -1,13 +1,18 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import faker from 'faker'
 import SkillsBadges from '~/components/SkillsBadges.vue'
 
 Vue.use(Vuetify)
 
-const testSkills = {
-  skillName: 'Skill Icon Name'
-}
+const testSkills = Array(faker.random.number({
+  min: 5,
+  max: 10
+}))
+  .fill(null)
+  .map(() => faker.random.word())
+  .reduce((p, i) => Object.assign(p, { [i]: faker.random.words() }), {})
 
 describe('SkillsBadges', () => {
   let testInstance = null
@@ -17,7 +22,7 @@ describe('SkillsBadges', () => {
     testInstance = mount(SkillsBadges, {
       ...localVue,
       propsData: {
-        input: testSkills
+        value: testSkills
       }
     })
   })

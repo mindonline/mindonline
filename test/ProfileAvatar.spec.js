@@ -1,15 +1,16 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import faker from 'faker'
 import ProfileAvatar from '~/components/ProfileAvatar.vue'
 
 Vue.use(Vuetify)
 
 const testAvatar = {
-  title: 'My Name',
-  subTitle: 'SubTitle',
-  image: 'domain.ltd/image.jpg',
-  imageTitle: 'Image with title'
+  title: faker.name.findName(),
+  subTitle: faker.name.jobTitle(),
+  image: faker.image.avatar(),
+  imageTitle: faker.lorem.sentence()
 }
 
 const textualProps = ['title', 'subTitle']

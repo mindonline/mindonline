@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="text-center">
     <v-avatar v-if="image" size="250px" class="mb-4">
       <img
         :src="image"
         :alt="imageTitle"
         :title="imageTitle"
+        class="zoomHover"
       >
     </v-avatar>
 
@@ -47,6 +48,14 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  .zoomHover {
+    transform: scale(0.9);
 
+    &:hover {
+      transform: scale(1.0);
+    }
+
+    transition: transform 1s ease-in-out;
+  }
 </style>

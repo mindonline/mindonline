@@ -1,4 +1,4 @@
-# mindonline
+# mindonline [![<mindonline>](https://circleci.com/gh/mindonline/mindonline.svg?style=shield)](https://circleci.com/gh/mindonline/mindonline)
 
 > Mikhail Levi Contact Page
 
@@ -18,5 +18,9 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
+# CI/CD
+```bash
+# Validate config
+$ circleci config validate
+```
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

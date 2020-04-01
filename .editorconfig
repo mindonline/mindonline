@@ -11,3 +11,6 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+[{*.html,*.vue}]
+ij_html_space_inside_empty_tag = true

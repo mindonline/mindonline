@@ -1,28 +1,32 @@
 <template>
-  <v-layout wrap justify-center align-start>
-    <v-flex xs12 md5 class="text-center">
+  <v-row wrap justify-center align-start>
+    <v-col cols="12" md="6">
       <profile-avatar
         :image="$store.state.ownerAvatarUrl"
         :image-title="$store.state.ownerAvatarTitle"
         :title="$store.state.ownerName"
         :sub-title="$store.state.ownerSubtitle"
       />
-    </v-flex>
-    <v-flex xs12 md5>
-      <div class="title mt-4 mb-4">
-        Contacts
-      </div>
-      <contact-list :value="$store.state.contacts" />
-    </v-flex>
-    <v-flex xs12 md5>
-      <div class="title mt-4 mb-4">
-        Primary Skills
-      </div>
-      <div>
-        <skills-badges :value="$store.state.primarySkills" />
-      </div>
-    </v-flex>
-  </v-layout>
+    </v-col>
+    <v-col cols="12" md="6">
+      <v-row>
+        <v-col cols="12">
+          <div class="title mt-4 mb-4">
+            Contacts
+          </div>
+          <contact-list :value="$store.state.contacts" />
+        </v-col>
+        <v-col cols="12">
+          <div class="title mt-4 mb-4">
+            Primary Skills
+          </div>
+          <div>
+            <skills-badges :value="$store.state.primarySkills" />
+          </div>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

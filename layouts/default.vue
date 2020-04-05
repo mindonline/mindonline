@@ -41,10 +41,10 @@
       class="justify-center"
       app
     >
-      <span>Built with Nuxt (commit #
-        <strong
+      <span>Built with Nuxt (commit
+        #<strong
           class="cursor--help"
-          :title="gitVersionTime">{{gitVersion.branch}})-{{ gitVersion.hash }}</strong>
+          :title="gitVersionTime">{{gitVersion.branch}}-{{ gitVersion.hash }}</strong>)
         / CircleCi / Docker. ML &copy; {{ new Date().getFullYear() }}
       </span>
     </v-footer>

@@ -1,4 +1,24 @@
+import { exec } from 'child_process'
 import colors from 'vuetify/es5/util/colors'
+
+// eslint-disable-next-line
+let GIT_VERSION = {
+  hash: 'unknown',
+  branch: 'unknown',
+  time: null
+}
+
+exec('git rev-parse --short HEAD', (error, stdout, stderr) => {
+  GIT_VERSION.hash = !error && !stderr ? stdout.trim() : 'nogit'
+})
+
+exec('git rev-parse --abbrev-ref HEAD', (error, stdout, stderr) => {
+  GIT_VERSION.branch = !error && !stderr ? stdout.trim() : 'nobranch'
+})
+
+exec('git --no-pager log --pretty=format:"%at" -n1', (error, stdout, stderr) => {
+  GIT_VERSION.time = !error && !stderr ? parseInt(stdout.trim()) : null
+})
 
 export default {
   mode: 'universal',
@@ -17,6 +37,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '//use.fontawesome.com/releases/v5.8.2/css/all.css' }
     ]
+  },
+  /*
+  ** Env variables
+   */
+  env: {
+    // eslint-disable-next-line object-shorthand
+    GIT_VERSION: GIT_VERSION
   },
   /*
   ** Customize the progress-bar color

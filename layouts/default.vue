@@ -41,11 +41,14 @@
       class="justify-center"
       app
     >
-      <span>Built with Nuxt (commit
-        #<strong
-          class="cursor--help"
-          :title="gitVersionTime">{{gitVersion.branch}}-{{ gitVersion.hash }}</strong>)
-        / CircleCi / Docker. ML &copy; {{ new Date().getFullYear() }}
+      <span>
+        Build #
+        <nuxt-link
+          to="/site-technologies"
+          class="cursor--help amber--text"
+          :title="'Commited at ' + gitVersionTime"
+        >{{ gitVersion.branch }}-{{ gitVersion.hash }}</nuxt-link>.
+        ML &copy; {{ new Date().getFullYear() }}
       </span>
     </v-footer>
   </v-app>
@@ -53,11 +56,6 @@
 
 <script>
   export default {
-    computed: {
-      gitVersionTime () {
-        return this.gitVersion.time ? (new Date(this.gitVersion.time * 1000)).toString() : 'Unknown time'
-      }
-    },
     data () {
       return {
         gitVersion: process.env.GIT_VERSION,
@@ -76,6 +74,11 @@
           }
         ],
         title: 'Mikhail Levi'
+      }
+    },
+    computed: {
+      gitVersionTime () {
+        return this.gitVersion.time ? (new Date(this.gitVersion.time * 1000)).toString() : 'Unknown time'
       }
     }
   }

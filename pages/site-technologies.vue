@@ -61,10 +61,23 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~vuetify/src/styles/styles";
+
   .spec-list {
-    display: grid;
-    grid-template-columns: auto auto;
     margin: 10px 0;
+    //noinspection SassScssUnresolvedVariable
+    @media #{map-get($display-breakpoints, 'md-and-up')} {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      dd {
+        padding: 0 0 0 10px;
+      }
+    }
+
+    dd {
+      padding: 0 0 10px 0;
+    }
 
     dt, dd {
       display: block
@@ -72,10 +85,6 @@
 
     dt {
       font-weight: bold;
-    }
-
-    dd {
-      padding-left: 10px;
     }
   }
 

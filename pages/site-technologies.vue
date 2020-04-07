@@ -56,6 +56,11 @@
       gitVersionTime () {
         return this.gitVersion.time ? (new Date(this.gitVersion.time * 1000)).toString() : 'Unknown time'
       }
+    },
+    head () {
+      return {
+        title: 'How this works?'
+      }
     }
   }
 </script>

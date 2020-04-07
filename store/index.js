@@ -11,7 +11,12 @@ export const state = () => ({
     Docker: 'fab fa-docker',
     Git: 'fab fa-git-alt',
     HTML5: 'fab fa-html5',
-    CSS3: 'fab fa-css3-alt'
+    CSS3: 'fab fa-css3-alt',
+    Linux: 'fab fa-linux',
+    SQL: 'fas fa-database',
+    Angular: 'fab fa-angular',
+    Bootstrap: 'fab fa-bootstrap',
+    SASS: 'fab fa-sass'
   },
   contacts: [
     {
@@ -28,6 +33,33 @@ export const state = () => ({
       name: '@mindonline',
       icon: 'fab fa-github',
       link: 'https://github.com/mindonline'
+    }
+  ],
+  workEfficiencyData: [
+    {
+      name: 'Remote work',
+      value: 90,
+      color: 'blue'
+    },
+    {
+      name: 'Remote communication',
+      value: 80,
+      color: 'red accent-1'
+    },
+    {
+      name: 'Coding Frontend',
+      value: 90,
+      color: 'light-green darken-4'
+    },
+    {
+      name: 'Coding Backend',
+      value: 80,
+      color: 'deep-purple darken-1'
+    },
+    {
+      name: 'Write tests',
+      value: 70,
+      color: 'teal lighten-3'
     }
   ]
 })

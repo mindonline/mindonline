@@ -1,11 +1,12 @@
 <template>
   <div class="text-center">
     <v-avatar v-if="image" size="250px" class="mb-4">
+      <!--suppress HtmlUnknownTarget -->
       <img
         :src="image"
         :alt="imageTitle"
         :title="imageTitle"
-        class="zoomHover"
+        class="avatar zoomHover"
       >
     </v-avatar>
 
@@ -49,6 +50,10 @@
 </script>
 
 <style lang="scss" scoped>
+  .avatar {
+    filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5));
+  }
+
   .zoomHover {
     transform: scale(0.9);
 

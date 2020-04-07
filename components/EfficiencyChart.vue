@@ -6,7 +6,7 @@
       class="v-sheet--offset mx-auto"
       max-width="calc(100% - 32px)"
     >
-      <template v-for="compitition in $store.state.workEfficiencyData">
+      <template v-for="compitition in value">
         <div :key="compitition.name" class="mb-3">
           <div class="subtitle">
             {{ compitition.name }}
@@ -42,7 +42,13 @@
 
 <script>
   export default {
-    name: 'EfficiencyChart'
+    name: 'EfficiencyChart',
+    props: {
+      value: {
+        type: Array,
+        required: true
+      }
+    }
   }
 </script>
 

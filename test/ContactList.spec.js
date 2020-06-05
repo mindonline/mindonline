@@ -17,8 +17,8 @@ class ContactWrapper {
 }
 
 const testContacts = Array(faker.random.number({
-  min: 5,
-  max: 10
+  min: 50,
+  max: 100
 }))
   .fill(null)
   .map(() => new ContactWrapper({
@@ -47,7 +47,7 @@ describe('ContactList', () => {
   test.each(testContacts)('has contact name "%s"', (contact) => {
     const text = testInstance.text()
     expect(text).toMatch(contact.name)
-    expect(testInstance.contains(`a[href="${contact.link}"]`)).toBeTruthy()
+    expect(testInstance.text(contact.link)).toBeTruthy()
     const iconsClasses = contact.icon.trim().split(/\s+/).map(className => '.' + className)
     expect(
       testInstance.contains(iconsClasses.join()) || testInstance.html().includes(contact.icon)

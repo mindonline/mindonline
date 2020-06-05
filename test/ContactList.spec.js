@@ -23,7 +23,7 @@ const testContacts = Array(faker.random.number({
   .fill(null)
   .map(() => new ContactWrapper({
     name: faker.internet.userName(),
-    icon: faker.random.words(),
+    icon: 'star',
     link: faker.internet.url()
   }))
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-center">
     <v-chip
       v-for="skill in skills"
       :key="skill.name"

@@ -10,9 +10,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'indent': 'off',
-    'vue/script-indent': ['warn', 2, {
-      'baseIndent': 1
-    }]
+    'indent': 'off'
   }
 }

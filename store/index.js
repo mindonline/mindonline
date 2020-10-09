@@ -1,4 +1,6 @@
 export const state = () => ({
+  birthday: new Date('1988-08-17'),
+  personal: "A %years% years old passionate coder",
   ownerName: 'Mikhail Levi',
   ownerSubtitle: 'Full Stack Web Developer',
   ownerAvatarUrl: 'photos/mikhail-levi-bkk-2020.jpg',
@@ -16,7 +18,9 @@ export const state = () => ({
     SQL: 'fas fa-database',
     Angular: 'fab fa-angular',
     Bootstrap: 'fab fa-bootstrap',
-    SASS: 'fab fa-sass'
+    SASS: 'fab fa-sass',
+    'Go Lang': 'fas fa-desktop',
+    Microservices: 'fas fa-server'
   },
   contacts: [
     {

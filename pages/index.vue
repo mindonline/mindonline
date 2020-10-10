@@ -2,50 +2,57 @@
   <v-img :src="backgroundImage" height="100%">
     <v-container>
       <v-row>
-        <v-col cols="12" md="6" offset-md="3">
-          <profile-avatar
-            :image="$store.state.ownerAvatarUrl"
-            :image-title="$store.state.ownerAvatarTitle"
-            :title="$store.state.ownerName"
-            :sub-title="$store.state.ownerSubtitle"
-          />
+        <v-col cols="12" md="6">
+          <!-- Left Side -->
+          <v-row>
+            <v-col cols="12">
+              <profile-avatar
+                :image="$store.state.ownerAvatarUrl"
+                :image-title="$store.state.ownerAvatarTitle"
+                :title="$store.state.ownerName"
+                :sub-title="$store.state.ownerSubtitle"
+              />
+            </v-col>
+          </v-row>
+          <v-row wrap justify-center align-start>
+            <v-col cols="12">
+              <div class="title mt-4 mb-4">
+                About
+              </div>
+              <personal :birthday="$store.state.birthday"></personal>
+            </v-col>
+            <v-col cols="12">
+              <div class="title mt-4 mb-4">
+                Contacts
+              </div>
+              <contact-list :value="$store.state.contacts"/>
+            </v-col>
+            <!-- /Left Side -->
+          </v-row>
         </v-col>
-      </v-row>
-      <v-row wrap justify-center align-start>
-        <v-col cols="12" md="6" offset-md="3">
-          <div class="title mt-4 mb-4">
-            About
-          </div>
-          <personal :birthday="$store.state.birthday"></personal>
-        </v-col>
-        <v-col cols="12" md="6" offset-md="3">
-          <div class="title mt-4 mb-4">
-            Contacts
-          </div>
-          <contact-list :value="$store.state.contacts"/>
-        </v-col>
-        <v-col cols="12" md="6" offset-md="3">
-          <div class="title mt-4 mb-4">
-            Primary Skills
-          </div>
-          <v-card>
-            <v-card-text>
-              <skills-badges :value="$store.state.primarySkills"/>
-            </v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="6" offset-md="3">
-          <div class="title mt-4 mb-4">
-            Efficiency stats
-          </div>
-          <div>
-            <efficiency-chart :value="$store.state.workEfficiencyData"></efficiency-chart>
-          </div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-
+        <v-col cols="12" md="6">
+          <v-row>
+            <!-- Right Side -->
+            <v-col cols="12">
+              <div class="title mt-4 mb-4">
+                Primary Skills
+              </div>
+              <v-card>
+                <v-card-text>
+                  <skills-badges :value="$store.state.primarySkills"/>
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col cols="12">
+              <div class="title mt-4 mb-4">
+                Efficiency stats
+              </div>
+              <div>
+                <efficiency-chart :value="$store.state.workEfficiencyData"></efficiency-chart>
+              </div>
+            </v-col>
+          </v-row>
+          <!-- /Right Side -->
         </v-col>
       </v-row>
     </v-container>

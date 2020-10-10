@@ -1,6 +1,6 @@
 export const state = () => ({
   birthday: new Date('1988-08-17'),
-  personal: "A %years% years old passionate coder",
+  personal: 'A %years% years old passionate coder.',
   ownerName: 'Mikhail Levi',
   ownerSubtitle: 'Full Stack Web Developer',
   ownerAvatarUrl: 'photos/mikhail-levi-bkk-2020.jpg',

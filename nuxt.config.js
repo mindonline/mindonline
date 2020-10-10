@@ -65,7 +65,7 @@ export default {
   buildModules: [
     ['@nuxt/typescript-build', {
       typeCheck: {
-        memoryLimit: 512,
+        memoryLimit: 1024,
         workers: 1
       },
       ignoreNotFoundWarnings: false

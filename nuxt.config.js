@@ -119,7 +119,6 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    vendor: ['vuetify'],
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     extend (config, ctx) {
     }

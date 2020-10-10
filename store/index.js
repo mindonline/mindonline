@@ -47,7 +47,7 @@ export const state = () => ({
     },
     {
       name: 'Remote communication',
-      value: 80,
+      value: 82,
       color: 'red accent-1'
     },
     {

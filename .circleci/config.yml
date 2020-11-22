@@ -27,7 +27,7 @@ jobs:
           name: Build Artifact for Production
           command: |
             yarn build
-            tar -caf build.tar.gz  *
+            tar -caf build.tar.gz .
       - persist_to_workspace:
           root: ./
           paths:

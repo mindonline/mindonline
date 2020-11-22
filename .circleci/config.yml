@@ -27,6 +27,7 @@ jobs:
           name: Build Artifact for Production
           command: |
             yarn build
+            sleep 10
             tar -caf build.tar.gz .
       - persist_to_workspace:
           root: ./

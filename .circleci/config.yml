@@ -24,7 +24,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          name: Build Artefact for Production
+          name: Build Artifact for Production
           command: |
             yarn build
             tar -caf build.tar.gz  *
@@ -46,7 +46,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            scp -P $HOST_PORT -o "StrictHostKeyChecking no" build.tar.gz $HOST_USER@$HOST_NAME:~/build/
+            scp -P $HOST_PORT -o "StrictHostKeyChecking no" build.tar.gz $HOST_USER@$HOST_NAME:~/build/build.tar.gz
             ssh $HOST_USER@$HOST_NAME -p $HOST_PORT -o "StrictHostKeyChecking no" "$DEPLOY_CMD"
 
 workflows:

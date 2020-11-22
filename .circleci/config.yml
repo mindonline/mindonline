@@ -47,7 +47,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            scp -P $HOST_PORT -o "StrictHostKeyChecking no" /tmp/build.tar.gz $HOST_USER@$HOST_NAME:~/build/build.tar.gz
+            scp -P $HOST_PORT -o "StrictHostKeyChecking no" build.tar.gz $HOST_USER@$HOST_NAME:~/build/build.tar.gz
             ssh $HOST_USER@$HOST_NAME -p $HOST_PORT -o "StrictHostKeyChecking no" "$DEPLOY_CMD"
 
 workflows:

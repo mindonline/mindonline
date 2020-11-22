@@ -40,7 +40,7 @@
       app
     >
       <span>
-        Build #
+        Release #
         <nuxt-link
           to="/site-technologies"
           class="cursor--help amber--text"

@@ -17,7 +17,7 @@ jobs:
           path: test-results/jest
 
   # Build app into single archive
-  build:
+  build-production:
     executor:
       name: node/default
     steps:

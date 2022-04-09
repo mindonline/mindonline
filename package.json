@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "nuxt": "^2.12.2",
     "vuex": "^3.1.3"
   },
